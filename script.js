@@ -17,11 +17,13 @@ $(pos1).one ("click", function(){
     if (turnNum % 2 == 0){
     pos1.innerHTML="x"
     arr[1]=1
+    victory()
     }
 
     else {
         pos1.innerHTML="o"
         arr[1]=2
+        victory()
     }
 
 turnNum++
@@ -34,11 +36,13 @@ $(pos2).one ("click", function(){
     if (turnNum % 2 == 0){
     pos2.innerHTML="x"
     arr[2]=1
+    victory()
     }
 
     else {
         pos2.innerHTML="o"
         arr[2]=2
+        victory()
     }
 
 turnNum++
@@ -51,11 +55,13 @@ $(pos3).one ("click", function(){
     if (turnNum % 2 == 0){
     pos3.innerHTML="x"
     arr[3]=1
+    victory()
     }
 
     else {
         pos3.innerHTML="o"
         arr[3]=2
+        victory()
     }
 
 turnNum++
@@ -68,11 +74,13 @@ $(pos4).one ("click", function(){
     if (turnNum % 2 == 0){
     pos4.innerHTML="x"
     arr[4]=1
+    victory()
     }
 
     else {
         pos4.innerHTML="o"
         arr[4]=2
+        victory()
     }
 
 turnNum++
@@ -84,11 +92,13 @@ $(pos5).one ("click", function(){
     if (turnNum % 2 == 0){
     pos5.innerHTML="x"
     arr[5]=1
+    victory()
     }
 
     else {
         pos5.innerHTML="o"
         arr[5]=2
+        victory()
     }
 
 turnNum++
@@ -101,11 +111,13 @@ $(pos6).one ("click", function(){
     if (turnNum % 2 == 0){
     pos6.innerHTML="x"
     arr[6]=1
+    victory()
     }
 
     else {
         pos6.innerHTML="o"
         arr[6]=2
+        victory()
     }
 
 turnNum++
@@ -117,11 +129,13 @@ $(pos7).one ("click", function(){
     if (turnNum % 2 == 0){
     pos7.innerHTML="x"
     arr[7]=1
+    victory()
     }
 
     else {
         pos7.innerHTML="o"
         arr[7]=2
+        victory()
     }
 
 turnNum++
@@ -134,11 +148,13 @@ $(pos8).one ("click", function(){
     if (turnNum % 2 == 0){
     pos8.innerHTML="x"
     arr[8]=1
+    victory()
     }
 
     else {
         pos8.innerHTML="o"
         arr[8]=2
+        victory()
     }
 
 turnNum++
@@ -150,14 +166,73 @@ $(pos9).one ("click", function(){
     if (turnNum % 2 == 0){
     pos9.innerHTML="x"
     arr[9]=1
+    victory()
     }
 
     else {
         pos9.innerHTML="o"
         arr[9]=2
+        victory()
     }
 
 turnNum++
 console.log(arr)
 
 })
+
+
+
+function victory()  {
+    if (arr[1] == 1 && arr[2] == 1 && arr[3] == 1) 
+    { alert ("Crosses won")
+ } 
+ else if (arr[1] == 2 && arr [2]==2 && arr[3] ==2) {
+     alert ("Noughts won")
+ }
+ else if (arr[4] == 1 && arr [5]==1 && arr[6] ==2) {
+     alert ("Crosses won")
+ }
+ else if (arr[4] == 2 && arr [5]==2 && arr[6] ==2) {
+     alert ("Noughts won")
+ }
+ else if (arr[7] == 1 && arr [8]==1 && arr[9] ==1) {
+     alert ("Crosses won")
+ }
+ else if (arr[7] == 2 && arr [8]==2 && arr[9] ==2) {
+     alert ("Noughts won")
+ }
+ else if (arr[1] == 1 && arr [5]==1 && arr[9] ==1) {
+     alert ("Crosses won")
+ }
+ else if (arr[1] == 2 && arr [5]==2 && arr[9] ==2) {
+     alert ("Noughts won")
+ }
+ else if (arr[7] == 1 && arr [5]==1 && arr[3] ==1) {
+     alert ("Crosses won")
+ }
+ 
+ else if (arr[7] == 2 && arr [5]==2 && arr[3] ==2) {
+     alert ("Noughts won")
+ }
+ else if (arr[1] == 1 && arr [4]==1 && arr[7] ==1) {
+     alert ("Crosses won")
+ }
+ else if (arr[1] == 2 && arr [4]==2 && arr[7] ==2) {
+     alert ("Noughts won")
+ }
+ else if (arr[2] == 1 && arr [5]==1 && arr[8] ==1) {
+     alert ("Crosses won")
+ }
+ else if (arr[2] == 2 && arr [5]==2 && arr[8] ==2) {
+     alert ("Noughts won")
+ }
+ else if (arr[3] == 1 && arr [6]==1 && arr[9] ==1) {
+     alert ("Crosses won")
+ }
+ else if (arr[3] == 2 && arr [6]==2 && arr[9] ==2) {
+     alert ("Noughts won")
+ }
+ else{
+     return
+ }
+ }
