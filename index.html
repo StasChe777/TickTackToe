@@ -1,37 +1,69 @@
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" rel= "Stylesheet" enctype="text/css" href="style.css">
 
     <script src="jquery-3.3.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="jquery-2.js"></script>
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://localhost:3000/socket.io/socket.io.js"></script>
+   -->
 </head>
 <body>
+        
+    
         <div class="Header"><h1>Tick-Tack=Toe</h1></div>
 <div class="GameWrapper">
 
 
     <div class="Board">
 
-        <div class="box" id="boxTopLeft" ></div>
-        <div class="box" id="boxTopMid" ></div>
-        <div class="box" id="boxTopRight" ></div>
+        <div class="box" id="boxTopLeft"></div>
+        <div class="box" id="boxTopMid"></div>
+        <div class="box" id="boxTopRight"></div>
 
         <div class="box" id="boxMiddleLeft" ></div>
-        <div class="box" id="boxMiddleMid"  ></div>
-        <div class="box" id="boxMiddleRight" ></div>
+        <div class="box" id="boxMiddleMid"></div>
+        <div class="box" id="boxMiddleRight"></div>
 
-        <div class="box" id="boxBottomLeft"  ></div>
-        <div class="box" id="boxBottomMid" ></div>
-        <div class="box" id="boxBottomRight" ></div>
+        <div class="box" id="boxBottomLeft"></div>
+        <div class="box" id="boxBottomMid"></div>
+        <div class="box" id="boxBottomRight"></div>
 
     </div>
 
 </div>
 
 
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+
+<script>
+        $(function () {
+          var socket = io.connect('http://localhost:3000');
+          $(pos1).one ("click", function(){
+            socket.emit('chat message', $("#boxTopLeft").val());
+            $('#boxTopLeft').val('');
+            return false;
+          });
+        });
+      </script>
+
+
+<script>
+   var socket = io.connect('http://localhost:3000');
+</script>
+
+
+<script src="index.js"></script>
+
 <script src="script.js"></script>
-<script src="jquery-3.3.1.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
 </body>
 
 
